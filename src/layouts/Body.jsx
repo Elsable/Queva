@@ -7,7 +7,7 @@ const Contenido = styled.div`
 export default memo(function Body(props) {
   return (
     <>
-      <Contenido className="col-md-12">
+      <Contenido className="container">
       {props.children}
       </Contenido>
     </>

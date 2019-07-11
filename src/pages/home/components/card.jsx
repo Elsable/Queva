@@ -5,8 +5,9 @@ const { Meta } = Card;
 
 export default memo(function Card1(props) {
   return (
+    <div className="" style={{'box-sizing':' border-box'}}>
     <Card
-      className="col-md-12"
+      className=""
       hoverable
       cover={<img  alt="example" src={props.image} />}
     >
@@ -21,5 +22,6 @@ export default memo(function Card1(props) {
         }
       />
     </Card>
+    </div>
   );
 });

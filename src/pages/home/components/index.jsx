@@ -34,7 +34,7 @@ export default withRouter(function HomeIndex({ character, history, match }) {
 
           return (
             <>
-              <div className="col-md-12 row text-center">
+              <div className="col-md-12 row text-center" style={{'justify-content':'center'}}>
                 {results ? (
                   results.map(({ name, image, status, id }) => (
                     <Link key={id} to={`/personaje/${id}`} {...id}>
@@ -90,3 +90,6 @@ export default withRouter(function HomeIndex({ character, history, match }) {
     </div>
   );
 });
+
+
+
