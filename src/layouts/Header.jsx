@@ -1,9 +1,13 @@
 import React from 'react'
+import { Redirect ,withRouter} from "react-router-dom";
+
 import Navbar from 'components/Navbar'
-export default function Header(props){
+export default withRouter(function Header({match,character,episode,SetEpisode,SetCharacter}){
     return(
         <>
-        <Navbar  character={props.character} episode={props.episode} SetEpisode={props.SetEpisode}  SetCharacter={props.SetCharacter}/>
+        {/* SetCharacter(inputRef.current.value) */}
+        {match.url === "/" ?   SetEpisode(""): SetCharacter("")}
+        <Navbar  character={character} episode={episode} SetEpisode={SetEpisode}  SetCharacter={SetCharacter}/>
         </>
     )
-}
+})

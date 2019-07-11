@@ -29,15 +29,18 @@ export default memo(function Routes(props) {
   
     return (
       <>
+      <div style={{background:'linear-gradient(76213deg, rgb(171, 210, 19), rgb(87, 101, 116))'}}>
+
       <Router>
           <Switch>
-          <Route path="/" exact render={(props)=>(<Layout1  character={character} SetCharacter={SetCharacter}><Home character={character} SetCharacter={SetCharacter} {...props}/></Layout1>)} /> 
-          <Route path="/episodes" exact render={(props)=>(<Layout1 episode={episode} SetEpisode={SetEpisode} ><Episodes episode={episode} SetEpisode={SetEpisode}  {...props}/></Layout1>)} /> 
+          <Route path="/" exact render={(props)=>(<Layout1  character={character} SetCharacter={SetCharacter}  episode={episode} SetEpisode={SetEpisode} ><Home character={character} SetCharacter={SetCharacter} {...props}/></Layout1>)} /> 
+          <Route path="/episodes" exact render={(props)=>(<Layout1 episode={episode}  character={character} SetCharacter={SetCharacter} SetEpisode={SetEpisode} ><Episodes episode={episode} SetEpisode={SetEpisode}  {...props}/></Layout1>)} /> 
            <Route path={`/personaje/:id`} render={props=> ( <Perfil {...props} /> )}/> 
           <Route component={NoMatch} />
           </Switch>
       </Router>
       {/* {console.log(character)} */}
-      </>
+
+      </div>      </>
     );
   })
