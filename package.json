@@ -10,9 +10,6 @@
     "global": "^4.4.0",
     "graphql": "^14.3.0",
     "graphql-tag": "^2.10.1",
-    "nginx": "0.0.0",
-    "ngrok": "^3.2.1",
-    "nw": "^0.39.2",
     "react": "^16.8.6",
     "react-apollo": "^2.5.5",
     "react-apollo-hooks": "^0.5.0",
@@ -23,8 +20,7 @@
     "react-spinners": "^0.5.4",
     "reactstrap": "^8.0.0",
     "styled-components": "^4.2.0",
-    "sweetalert2": "^8.12.2",
-    "zent": "^6.6.4"
+    "zent": "^6.6.5"
   },
   "scripts": {
     "start": "react-scripts start",

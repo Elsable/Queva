@@ -27,7 +27,60 @@ export default memo(
               characters: { info: { next, prev, pages, count } = {} } = {}
             } = {}
           }) => {
-            if (loading) return <>loading</>;
+            if (loading) return <> <nav
+            style={{ background: "#576574" }}
+            className="navbar navbar-expand-md navbar-dark"
+          >
+            <Link to="/" className="">
+              <span className="navbar-brand">
+                <h2>Rick & Morty API</h2>
+              </span>
+            </Link>
+
+            {match.url !== "/episodes" ? (
+              <Link to="/episodes" className="btn btn-primary">
+                Episodes
+              </Link>
+            ) : (
+              <Link to="/" className="btn btn-primary">
+                Characters
+              </Link>
+            )}
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon" />
+            </button>
+            <div
+              class="collapse navbar-collapse"
+              id="navbarTogglerDemo02"
+            >
+              <ul className="navbar-nav ml-auto">
+                <input
+                  type="text"
+                  placeholder="Search a character"
+                  ref={inputRef}
+                />
+                <button
+                  className="btn btn-primary"
+                  onClick={() => {
+                    match.url !== "/episodes"
+                      ? SetCharacter(inputRef.current.value)
+                      : SetEpisode(inputRef.current.value);
+                  }}
+                >
+                  Search
+                </button>
+              </ul>
+            </div>
+          </nav></>;
 
             next = next ? next : pages;
             prev = prev ? prev : 1;

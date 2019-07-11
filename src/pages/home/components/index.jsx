@@ -6,7 +6,7 @@ import { HOME_PAGE } from "graphql/querys";
 import { GET_EPISODES } from "graphql/querys";
 import { paginationButton } from "components/helpers/";
 import { Link } from "react-router-dom";
-import { Redirect, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 export default withRouter(function HomeIndex({ character, history, match }) {
   const [page, setPage] = useState(1);
@@ -50,37 +50,38 @@ export default withRouter(function HomeIndex({ character, history, match }) {
                     <h2>No results found</h2>
                   </div>
                 )}
-               
+
                 {count > 1 && (
                   <>
-                  <div className="row  btn-toolbar  col-12 mb-5">
-                     <br/><hr/>
-                    <button
-                      type="button"
-                      className="btn btn-success btn-sm"
-                      onClick={() => setPage(prev)}
-                    >
-                      {" "}
-                      Previous
-                    </button>
+                    <div className="row  btn-toolbar  col-12 mb-5">
+                      <br />
+                      <hr />
+                      <button
+                        type="button"
+                        className="btn btn-success btn-sm"
+                        onClick={() => setPage(prev)}
+                      >
+                        {" "}
+                        Previous
+                      </button>
 
-                  
+                      <button
+                        type="button"
+                        className="btn btn-success btn-sm"
+                        onClick={() => setPage(next)}
+                      >
+                        {" "}
+                        Next
+                      </button>
+                    </div>
 
-                    <button
-                      type="button"
-                      className="btn btn-success btn-sm"
-                      onClick={() => setPage(next)}
-                    >
-                      {" "}
-                      Next
-                    </button>
-                  </div>
-               
-                  <div className="row  btn-toolbar  col-md-12 mb-5">
+                    <div className="row  btn-toolbar  col-md-12 mb-5">
                       <div className="row btn-group">
                         {paginationButton(pages, setPage, page)}
                       </div>
-                    </div></> )}
+                    </div>
+                  </>
+                )}
               </div>
             </>
           );

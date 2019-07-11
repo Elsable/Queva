@@ -1,6 +1,7 @@
 import React, { memo, useState } from "react";
 import Button from "@material-ui/core/Button";
 import { Modal } from "antd";
+import { Link } from "react-router-dom";
 
 export default memo(function ModalEpisodes(props) {
   const [visible, setVisible] = useState(false);
@@ -39,6 +40,8 @@ export default memo(function ModalEpisodes(props) {
           {props.characters.map((d,index)=>{
               return(
                   <div key={index} className="jumbotron">
+                    <Link key={index} to={`/personaje/${d.id}`} {...d.id}>
+
                       <img
                           className=""
                           style={{width: 240}}
@@ -46,7 +49,7 @@ export default memo(function ModalEpisodes(props) {
                           alt="alo"
                         />    <br/> 
                   {d.name}
-                   
+                   </Link>
                  </div>
               )
           })}

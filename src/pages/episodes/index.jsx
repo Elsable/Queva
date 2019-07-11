@@ -36,7 +36,6 @@ export default function Episodes({ episode, SetEpisode }) {
                   <Table className="table table-responsive col-md-12 ">
                     <thead>
                       <tr>
-                        
                         <th>Name</th>
                         <th>Air date</th>
                         <th>Options</th>

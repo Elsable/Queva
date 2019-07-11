@@ -18,6 +18,7 @@ query($page: Int!, $episode:String!) {
       characters{
         name
         image
+        id
       }
     }
   }
