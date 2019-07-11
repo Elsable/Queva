@@ -2,7 +2,7 @@ import React, { memo, useState } from "react";
 import Button from "@material-ui/core/Button";
 import { Modal } from "antd";
 import { Link } from "react-router-dom";
-
+//this function open the modal and show information the a episode
 export default memo(function ModalEpisodes(props) {
   const [visible, setVisible] = useState(false);
 
@@ -35,27 +35,30 @@ export default memo(function ModalEpisodes(props) {
         </h1>
         <h1 className="h4">
         <div className=" col-md-12" style={{background:"#abd213"}}>
-          <strong>characters in the episode :</strong></div>
-          <section className="col-md-12 row">
+          <strong>characters in the episode :</strong>
+          <section className="col-md-12 row ">
           {props.characters.map((d,index)=>{
               return(
-                  <div key={index} className="jumbotron">
-                    <Link key={index} to={`/personaje/${d.id}`} {...d.id}>
-
-                      <img
+                    <Link className="col-md-4" key={index} to={`/personaje/${d.id}`} {...d.id}>
+                      <section className="col-md-12">
+                        <div className="jumbotron">
+                                                <img
                           className=""
                           style={{width: 240}}
                           src={d.image}
                           alt="alo"
                         />    <br/> 
                   {d.name}
+                  
+                        </div>
+
+                  </section>
                    </Link>
-                 </div>
               )
           })}
-           </section>
+          </section>
+          </div>
         </h1>
-        
       </Modal>
     </>
   );

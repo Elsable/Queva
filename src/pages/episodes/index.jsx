@@ -5,11 +5,11 @@ import { GET_EPISODES } from "graphql/querys";
 import { Table } from "reactstrap";
 
 
+//this function execute the query for the datas the episodes and rendering in  the table
 export default function Episodes({ episode, SetEpisode }) {
   const [page] = useState(1);
   return (
-    <div className="col-md-12">
-      <div className="jumbotron container">
+      <div className="col-md-12 jumbotron container">
         <Query variables={{ page, episode }} query={GET_EPISODES}>
           {({
             loading,
@@ -31,9 +31,8 @@ export default function Episodes({ episode, SetEpisode }) {
             return (
               <center>
               <strong>Episodes</strong>
-              
                 {results ? (
-                  <Table className="table table-responsive col-md-12 ">
+                  <Table className="table table-responsive">
                     <thead>
                       <tr>
                         <th>Name</th>
@@ -64,7 +63,7 @@ export default function Episodes({ episode, SetEpisode }) {
             );
           }}
         </Query>
-      </div>
+      
     </div>
   );
 }
