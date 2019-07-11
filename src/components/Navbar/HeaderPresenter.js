@@ -28,7 +28,10 @@ export default memo(
             } = {}
           }) => {
             if (loading) return <> <nav
-            style={{ background: "#576574" }}
+            // style={{ background: "#576574" }}
+            // style={{background:"#273c75"}}
+            style={{background:" rgb(87, 101, 116)"}}
+            
             className="navbar navbar-expand-md navbar-dark"
           >
             <Link to="/" className="">

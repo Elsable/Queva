@@ -37,7 +37,7 @@ export default memo(function Routes(props) {
           <Route component={NoMatch} />
           </Switch>
       </Router>
-      {console.log(character)}
+      {/* {console.log(character)} */}
       </>
     );
   })

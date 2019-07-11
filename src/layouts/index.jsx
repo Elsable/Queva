@@ -9,7 +9,7 @@ export default memo(withRouter(function Layout(props) {
     return(
         <>
         <Header episode={props.episode} SetEpisode={props.SetEpisode}  character={props.character} SetCharacter={props.SetCharacter}/>
-            <Body ruta={props.match.path}>            
+            <Body ruta={props.match.path} >            
             {props.children}
             </Body>
         </>

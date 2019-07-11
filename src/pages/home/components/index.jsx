@@ -11,7 +11,7 @@ import { withRouter } from "react-router-dom";
 export default withRouter(function HomeIndex({ character, history, match }) {
   const [page, setPage] = useState(1);
   return (
-    <div className="col-md-12">
+    <div className="col-md-12" >
       <Query
         variables={{ page, character }}
         query={match.url === "/" ? HOME_PAGE : GET_EPISODES}
