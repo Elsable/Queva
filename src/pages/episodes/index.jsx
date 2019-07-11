@@ -9,7 +9,7 @@ import { Table } from "reactstrap";
 export default function Episodes({ episode, SetEpisode }) {
   const [page] = useState(1);
   return (
-      <div className="col-md-12 jumbotron container">
+      <div className="col-md-12 container">
         <Query variables={{ page, episode }} query={GET_EPISODES}>
           {({
             loading,
@@ -30,14 +30,13 @@ export default function Episodes({ episode, SetEpisode }) {
 
             return (
               <center>
-              <strong>Episodes</strong>
                 {results ? (
-                  <Table className="table table-responsive">
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>Air date</th>
-                        <th>Options</th>
+                  <Table className="table-responsive{-sm|-md|-lg|-xl}">
+                    <thead className="thead-dark">
+                      <tr className="col-md-12 ">
+                        <th className="col-md-4" >Name</th>
+                        <th className="col-md-4">Air date</th>
+                        <th className="col-md-4">Options</th>
                       </tr>
                     </thead>
                     <tbody>

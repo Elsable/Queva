@@ -37,7 +37,7 @@ export default withRouter(function HomeIndex({ character, history, match }) {
               <div className="col-md-12 row text-center" style={{'justify-content':'center'}}>
                 {results ? (
                   results.map(({ name, image, status, id }) => (
-                    <Link key={id} to={`/personaje/${id}`} {...id}>
+                    <Link style={{padding:10}} key={id} to={`/personaje/${id}`} {...id}>
                       <Card1
                         style={{ padding: 15 }}
                         className="col-md-4"

@@ -36,14 +36,14 @@ export default memo(function ModalEpisodes(props) {
         <h1 className="h4">
           <div className=" col-md-12" style={{ background: "#abd213" }}>
             <strong>characters in the episode :</strong>
-            <section className="col-md-12 row ">
+            <section className="col-md-12 row  text-center" style={{'justify-content':'center'}}>
               {props.characters.map((d, index) => {
                 return (
                   <Link className="col-md-4" key={index} to={`/personaje/${d.id}`} {...d.id}>
                     <section className="col-md-12">
-                      <div className="jumbotron">
+                      <div className="jumbotron center-block">
                         <img
-                          className=""
+                          className="img-thumbnail"
                           style={{ width: 240 }}
                           src={d.image}
                           alt="alo"

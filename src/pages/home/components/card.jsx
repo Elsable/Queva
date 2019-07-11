@@ -9,7 +9,7 @@ export default memo(function Card1(props) {
     <Card
       className=""
       hoverable
-      cover={<img  alt="example" src={props.image} />}
+      cover={<img  className="img-thumbnail" alt="example" src={props.image} />}
     >
       <Meta
       

@@ -36,37 +36,37 @@ export default memo(
                       <div className="col-md-12  row "  style={{ background: "#abd213",padding:32 }} >
                         <div className="col-md-2 card">
                         <img
-                          className=""
+                          className="img-thumbnail"
                           style={{width: 240}}
                           src={data.character.image}
                           alt="alo"
                         />                        </div>
                         
                         <div className="col-md-4 card">
-                          <h1 className="h1">Information:</h1>
-                          <h1 className="h3">
+                          <h1 className="h2">Information:</h1>
+                          <h1 className="h4">
                             <b>name:</b> {data.character.name}
                           </h1>
-                          <h1 className="h3">
+                          <h1 className="h4">
                             <b>gender:</b>
                             {data.character.gender}
                           </h1>
-                          <h1 className="h3">
+                          <h1 className="h4">
                             <b>species:</b>
                             {data.character.species}
                           </h1>
-                          <h1 className="h3">
+                          <h1 className="h4">
                             <b>origen:</b>
                             {data.character.origin.name}
                           </h1>
-                          <h1 className="h3">
+                          <h1 className="h4">
                             <b>status:</b>
                             {data.character.status}
                           </h1>
                         </div>
                         <section className="col-md-12">
                           
-                          <h1 className="h1">Episodes where {data.character.name} participates:</h1>
+                          <h1 className="h2">Episodes where {data.character.name} participates:</h1>
                           <div className="col-md-12 row">                          
                           {data.character.episode.map((data)=>{
                             return(
