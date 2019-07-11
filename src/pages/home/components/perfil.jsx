@@ -5,7 +5,7 @@ import { Query } from "react-apollo";
 import { GET_PROFILE } from "graphql/querys";
 import Cardepisodes from "./cardepisodes";
 
-
+///this function make consuming the query for giving data for rendering information
 export default memo(
   withRouter(function Perfil({ history, match }) {
     const { id } = match.params;
@@ -33,7 +33,7 @@ export default memo(
                       onCancel={RedirectHome}
                       onOk={RedirectHome}
                     >
-                      <div className="col-md-12  row jumbotron">
+                      <div className="col-md-12  row "  style={{ background: "#abd213",padding:32 }} >
                         <div className="col-md-2 card">
                         <img
                           className=""
@@ -64,7 +64,7 @@ export default memo(
                             {data.character.status}
                           </h1>
                         </div>
-                        <div className="col-md-12">
+                        <section className="col-md-12">
                           
                           <h1 className="h1">Episodes where {data.character.name} participates:</h1>
                           <div className="col-md-12 row">                          
@@ -74,7 +74,7 @@ export default memo(
                             )
                           })}</div>
                           
-                        </div>
+                        </section>
                       </div>
                     </Modal>
                   ) : (

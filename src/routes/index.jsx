@@ -14,7 +14,7 @@ function NoMatch({ location }) {
     return (
       <div className="jumbotron align-items-center">
         <h3>
-          Pagina no encontrada <code>{location.pathname}</code>
+          Page no found <code>{location.pathname}</code>
         </h3>
       </div>
     );

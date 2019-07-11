@@ -34,29 +34,29 @@ export default memo(function ModalEpisodes(props) {
           <strong>Episode</strong>:{props.episode}
         </h1>
         <h1 className="h4">
-        <div className=" col-md-12" style={{background:"#abd213"}}>
-          <strong>characters in the episode :</strong>
-          <section className="col-md-12 row ">
-          {props.characters.map((d,index)=>{
-              return(
-                    <Link className="col-md-4" key={index} to={`/personaje/${d.id}`} {...d.id}>
-                      <section className="col-md-12">
-                        <div className="jumbotron">
-                                                <img
+          <div className=" col-md-12" style={{ background: "#abd213" }}>
+            <strong>characters in the episode :</strong>
+            <section className="col-md-12 row ">
+              {props.characters.map((d, index) => {
+                return (
+                  <Link className="col-md-4" key={index} to={`/personaje/${d.id}`} {...d.id}>
+                    <section className="col-md-12">
+                      <div className="jumbotron">
+                        <img
                           className=""
-                          style={{width: 240}}
+                          style={{ width: 240 }}
                           src={d.image}
                           alt="alo"
-                        />    <br/> 
-                  {d.name}
-                  
-                        </div>
+                        />    <br />
+                        {d.name}
 
-                  </section>
-                   </Link>
-              )
-          })}
-          </section>
+                      </div>
+
+                    </section>
+                  </Link>
+                )
+              })}
+            </section>
           </div>
         </h1>
       </Modal>
