@@ -3,7 +3,7 @@ import { Card } from "antd";
 import { withRouter } from "react-router-dom";
 
 const { Meta } = Card;
-
+/// this function return information the episode
 export default memo(withRouter(function CardEpisodies({
   name,
   air_date,

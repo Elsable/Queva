@@ -1,6 +1,7 @@
 import React from 'react'
-import { Container } from '../../styles/Utils';
 import HomeIndex from './components/index'
+
+///this function is the Home, here call the function HomeIndex
 export default function Home(props, match){
     return(
         <div className="col-md-12">

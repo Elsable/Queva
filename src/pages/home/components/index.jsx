@@ -8,6 +8,7 @@ import { paginationButton } from "components/helpers/";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
+///this function is the principal, beacuse consuming the api graphql and rendering information
 export default withRouter(function HomeIndex({ character, history, match }) {
   const [page, setPage] = useState(1);
   return (

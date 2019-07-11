@@ -11,7 +11,6 @@ export default memo(withRouter(function Body({ match,children}) {
     <>
       <Contenido  style={{background:'linear-gradient(76213deg, rgb(171, 210, 19), rgb(87, 101, 116))'}}>
         <center style={{background:'linear-gradient(0deg, rgb(171, 210, 19), rgb(87, 101, 116)'}}>
-        {/* // linear-gradient(0deg, rgb(171, 210, 19), rgb(87, 101, 116));'}}> */}
       {match.url !== "/episodes" ? (
       <strong className="h1">Characters</strong>
       ):

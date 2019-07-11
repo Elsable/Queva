@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { Card } from "antd";
 
 const { Meta } = Card;
-
+//this function return a card with information the api graphql
 export default memo(function Card1(props) {
   return (
     <div className="" style={{'box-sizing':' border-box'}}>
